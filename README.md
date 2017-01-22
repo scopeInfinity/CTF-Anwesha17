@@ -18,6 +18,8 @@ Capture The Flag for Anwesha'17
 
 
 - [ ] JavaScript Inject
-- [ ] Sql Injection
+- [X] Sql Injection
 - [ ] XSS
 - [ ] Session Hijacking
+- [ ] User Agent
+- [ ] .htaccess
