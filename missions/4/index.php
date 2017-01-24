@@ -12,7 +12,7 @@ mustLogin();
 	<?php
 	$success =false;
 		if(isset($_POST['uname']) && isset($_POST['pwd'])) {
-			$conv = mysqli_connect(DB_HOST,'ctfdbview',"wecandoitna","CTF17");
+			$conv = mysqli_connect(DB_HOST,'ctfdbview',"wecandoitna","ctf");
 
 			// Check connection
 			if (mysqli_connect_errno())
