@@ -6,4 +6,18 @@ function getFlag($qid) {
 	return sha1($flag . ":" . $userId);
 }
 
+function isLogin() {
+	//Temperary
+	if(isset($_COOKIE['username']) && $_COOKIE['username']=='weareadmins') {
+		return true;
+	}
+	return false;
+}
+function mustLogin() {
+	if(!isLogin()) {
+		echo "User Must Login!";
+		die();
+	}
+}
+
 ?>

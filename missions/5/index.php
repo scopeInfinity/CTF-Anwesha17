@@ -1,3 +1,7 @@
+<?php
+require('../../flagcontroller.php');
+mustLogin();
+?>
 <html>
 <head><title>We use gedit</title></head>
 <body>

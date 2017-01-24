@@ -1,5 +1,9 @@
 <?php
 require('flagcontroller.php');
+function getEmail() {
+	return "gagan1kumar.cs@gmail.com";
+}
+
 function canLogin($id, $token)
 {
 	//use $con
@@ -15,9 +19,7 @@ function attemptQuestion($qid, $flag) {
 	} else {
 		$arr[1]="Invalid Flag";
 	}
-
-	return json_encode($arr); 
-
+	return json_encode($arr);
 }
 
 

@@ -1,5 +1,6 @@
 <?php
 require('../../flagcontroller.php');
+mustLogin();
 ?>
 <html>
 <head>
