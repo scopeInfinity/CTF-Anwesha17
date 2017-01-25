@@ -1,0 +1,193 @@
+/* 
+    Created on : Jan 24, 2017, 6:54:50 PM
+    Author     : jaita
+*/
+
+body{
+    margin: 0;
+    padding:0;
+    overflow:auto;
+    height:100%;
+}
+
+.header .h2
+{
+    color: black;
+}
+/* header end */
+
+/*------ h1, h2, h3, h4, h5, h6 ------- */
+h1,
+
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.body-area h2 {
+    font-family: Terminal, monospace;
+    text-transform:none;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: wheat;
+    
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 74px;
+}
+header h1 {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  font-size: 50px;
+  line-height: 52px;
+}
+header h2 {
+    color:black;
+}
+h3 {
+  font-size: 30px;
+  line-height: 34px;
+  margin: 32px 0 15px;
+  font-weight: normal;
+}
+.row-1 .h3
+{
+    color: #000;
+}
+.content-extra h3 {
+  margin: 42px 0 25px;
+}
+h4 {
+  font-size: 48px;
+  line-height: 50px;
+  margin: 21px 0 20px;
+}
+h5 {
+  font-size: 18px;
+  color: #939393;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+p {
+  padding-bottom: 25px;
+  margin: 0;
+}
+/*h1,h2,h3,h4,h5,h6 end */
+
+
+header {
+  padding: 30px 0 29px;
+  z-index: 50;
+  background: #534533; 
+}
+
+.Site-top {
+    position:relative;
+    height: 60px;
+    width: 100%;
+    background-color: #000000;
+background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+
+}
+
+.register{
+    position:absolute;
+    top:10px;
+    right:130px;
+}
+.logout{
+    position:absolute;
+    right:40px;
+    top:10px;
+}
+.container{
+    position:absolute;
+    left:170px;
+}
+/* Set a style for all buttons */
+.Site-top button {
+box-shadow: #5488EC;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #29B6F6;
+    color: black;
+        padding: 10px 15px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width:fit-content;
+}
+
+.list {
+    height:60px;
+    width:100%;
+background-color: #0f1c17;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+opacity: 2.8;
+    border-bottom: 1px solid blue;
+}
+
+.list li:hover{
+    background-color: black;
+}
+
+.list li{
+    display:inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px 10px 10px 10px;
+    height:40px;
+    width:200px;
+    text-align:center;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.list li a{
+    padding:10px  0px 10px 0px;
+    margin:auto;
+}
+
+.ul {
+    font-family: "COMIC SANS MS";
+    font-size: 20px;
+}
+.body-area {
+    position:relative;
+    height:1000px;
+    width: 100%;
+    background: url('../img/bg-content.jpg')  no-repeat center center fixed;
+    background-size:100%; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;   
+}
+
+.body-area .container .h2  {
+    text-align: center;
+    font-family: "COMIC SANS MS";
+    font-size: 36px;
+    font color: black;
+}
+
+.Site-top button {
+    position:absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.footer {
+  padding: 11px 0 10px;
+background: black ;
+}
