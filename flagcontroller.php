@@ -24,7 +24,7 @@ function getBaseFlag($qid) {
 
 function getFlagUser($qid,$userId) {
 	$flag = getBaseFlag($qid);
-	echo "For ".$qid. " and ".$userId."\t".$flag."<br>";
+	// echo "For ".$qid. " and ".$userId."\t".$flag."<br>";
 	return sha1($flag . ":" . $userId);
 }
 
