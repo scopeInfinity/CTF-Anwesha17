@@ -3,13 +3,14 @@ require('../../flagcontroller.php');
 mustLogin();
 ?>
 <html>
-<head><title>Proxy</title></head>
+<head>
+	<title>Flag</title>
+</head>
 <body>
-	Yooooo <br>
-	Flag is 
 <?php
-	echo getFlag(7);
-?>
+echo "Flag : ".getFlag(6)." <br>";
 
+?>
+	
 </body>
 </html>
