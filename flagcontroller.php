@@ -1,9 +1,18 @@
 <?php
+session_start();
 require("dbConnection.php");
-function getFlag($qid) {
-	$flag = "123";
-	$userId = 123;
+function getFlagUser($qid,$userId) {
+	$flag = getBaseFlag($qid);
 	return sha1($flag . ":" . $userId);
+}
+
+function getFlag($qid) {
+	if(!isLogin()) {
+		return "Please Login First";
+	}
+	$flag = getBaseFlag();
+	$userId = $_SESSION['id'];
+	return getFlagUser($userId,$flag);
 }
 
 function isLogin() {

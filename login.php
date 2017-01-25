@@ -1,16 +1,10 @@
 <?php
-session_start();
-if(isset($_POST['id']) && isset($_POST['token'])) {
-	require("dbConnection.php");
+if(isset($_POST['anwid']) && isset($_POST['pass'])) {
 	require("controller.php");
-	if (canLogin($_POST['id'], $_POST['token'])) {
+	if (canLogin($_POST['anwid'], $_POST['pass'])) {
 		session_regenerate_id(true);
-		$_SESSION['id']=$_POST['id'];
-		echo json_encode(0,"Logged In");
 	}
-	else
-		echo json_encode(-1,"Invalid Authentication");
 }
 else
-	echo json_encode(-1,"Invalid Input");
+echo "Invalid Input";
 ?>

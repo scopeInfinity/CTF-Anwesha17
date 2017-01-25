@@ -2,7 +2,7 @@
 define("DB_HOST","127.0.0.1");
 define("DB_username","root");
 define("DB_password","");
-define("DB_database","ctf");
+define("DB_database","CTF17");
 
 function dbConnect() {
 	$con = mysqli_connect(DB_HOST,DB_username,DB_password,DB_database);
@@ -12,6 +12,7 @@ function dbConnect() {
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	  die();
 	}
+	return $con;
 }
 
 ?>
