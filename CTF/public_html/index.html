@@ -24,8 +24,10 @@ Capture The Flag hosted by Anwesha IITP 2017.
             type: 'post',
             url: '../../register.php',
             data: $('#form1').serialize(),
-            success: function () {
+            success: function (response) {
               alert('form was submitted');
+              cosole.log(response);
+              
             }
           });
 
@@ -34,7 +36,35 @@ Capture The Flag hosted by Anwesha IITP 2017.
       });
     </script>
         
+    <script>
         
+      $(function () {
+        $('#form2').on('submit', function (e) {
+
+          e.preventDefault();
+          console.log($('#form1').serialize());
+
+          $.ajax({
+            type: 'post',
+            url: '../../register.php',
+            data: $('#form1').serialize(),
+            success: function (response) {
+                var result = $.trim(data);
+                if(result==="login"){
+                     location.href="/quest.html"
+                }
+              cosole.log(response);
+              
+            }
+          });
+
+        });
+
+      });
+    </script>
+        
+
+    
     </head>
     <body>
         <div class="Site-top">
@@ -61,11 +91,11 @@ Capture The Flag hosted by Anwesha IITP 2017.
                   </div>
       <div id="login" class="modal">
      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-     <form class="modal-content animate" action="action_page.php">      <!-- Modal Content -->
+     <form class="modal-content animate" id="form2">      <!-- Modal Content -->
          <label><b>Username</b></label>
-         <input type="text" placeholder="Enter Username"  maxlength="15" style="height: 30px" name="uname" required>
+         <input type="text" placeholder="Enter Username"  maxlength="15" style="height: 30px" name="anwid" required>
          <label><b>Password</b></label>
-         <input type="password" placeholder="Enter Password"  style="height: 30px" name="psw" required>
+         <input type="password" placeholder="Enter Password"  style="height: 30px" name="pass" required>
          <button type="submit">Login</button>
          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
      </form>
