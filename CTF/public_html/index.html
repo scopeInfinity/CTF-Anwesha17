@@ -10,6 +10,31 @@ Capture The Flag hosted by Anwesha IITP 2017.
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        
+      $(function () {
+        $('#form1').on('submit', function (e) {
+
+          e.preventDefault();
+          console.log($('#form1').serialize());
+
+          $.ajax({
+            type: 'post',
+            url: '../../register.php',
+            data: $('#form1').serialize(),
+            success: function () {
+              alert('form was submitted');
+            }
+          });
+
+        });
+
+      });
+    </script>
+        
+        
     </head>
     <body>
         <div class="Site-top">
@@ -20,9 +45,13 @@ Capture The Flag hosted by Anwesha IITP 2017.
                   </div>
       <div id="register" class="modal">
      <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
-     <form class="modal-content animate" action="register.php" >      <!-- Modal Content -->
+     <form class="modal-content animate" id="form1">      <!-- Modal Content -->
          <label><b>Anwesha Id</b></label>
-         <input type="text" placeholder="Enter AnweshId" class="mytext" maxlength="15" style="height: 30px" name="anw_id" required>
+         <input type="text" placeholder="Enter AnweshId" class="mytext" maxlength="15" style="height: 30px" name="anwid" required>
+         <label><b>Username</b></label>
+         <input type="text" placeholder="Enter Username"  maxlength="25" style="height: 30px" name="username" required>  
+         <label><b>Password</b></label>
+         <input type="password" placeholder="Enter Password"  style="height: 30px" name="pass" required>
          <button type="submit">Submit</button>
          <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
      </form>
