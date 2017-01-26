@@ -5,6 +5,7 @@ mustLogin();
 <html>
 <head>
 	<title>Key Smuggle</title>
+        <link rel="stylesheet" type="text/css" href="miss2.css">
 </head>
 <body>
 John have found a bag, having mysterious numbers along with a Photo<br>

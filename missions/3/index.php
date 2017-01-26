@@ -6,6 +6,7 @@ mustLogin();
 
 <head>
 	<title>Just Login</title>
+        <link rel="stylesheet" type="text/css" href="miss3.css">
 </head>
 <body>
 	<?php

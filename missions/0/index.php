@@ -6,6 +6,7 @@ mustLogin();
 
 <head>
 	<title>Get Flag</title>
+	<link rel="stylesheet" type="text/css" href="miss0.css">
 </head>
 <body>
 	<script type="text/javascript">
@@ -19,8 +20,10 @@ mustLogin();
 		}
 		
 	}</script>
+	<div class="cont">
 	<input type='text' id='key' placeholder='Enter Key'><br>
 	<input type='button' onclick='done();' value='Give me Flag'> <br>
 	<span id='keyhere' >
+	</div>
 </body>
 </html>

@@ -5,6 +5,7 @@ mustLogin();
 <html>
 <head>
 	<title>Shopping Complex</title>
+        <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
 <?php

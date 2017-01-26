@@ -3,7 +3,9 @@ require('../../flagcontroller.php');
 mustLogin();
 ?>
 <html>
-<head><title>Secret Code</title></head>
+<head><title>Secret Code</title>
+<link rel="stylesheet" type="text/css" href="miss8.css">
+</head>
 <body>
 	<?php
 	$ua = $_SERVER['HTTP_USER_AGENT'];

@@ -3,7 +3,9 @@ require('../../flagcontroller.php');
 mustLogin();
 ?>
 <html>
-<head><title>Hack using logs</title></head>
+<head><title>Hack using logs</title>
+<link rel="stylesheet" type="text/css" href="miss8.css">
+</head>
 <body>
 
 	<?php
