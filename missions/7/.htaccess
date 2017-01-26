@@ -1,2 +1,4 @@
 order deny,allow
 deny from 14.139.194.12
+ErrorDocument 403 "Government Hate Hackers"
+
