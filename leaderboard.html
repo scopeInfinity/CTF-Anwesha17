@@ -37,6 +37,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
                     <th>Sl. No.</th>
                     <th>Username</th>
                     <th>Score</th>
+                    <th></th>
                 </thead>
                
                 <script language="javascript" type="text/javascript">
@@ -54,6 +55,11 @@ Capture The Flag hosted by Anwesha IITP 2017.
                 var str="<tr><td>" + (i+1) + "</td>";
                 str+="<td>" + data[i][1] + "</td>";
                 str+="<td>" + data[i][0] + "</td>";
+                str+="<td>";
+                if(data[i][3]) {
+                    str+="<span style='font-size:0.7em'>Attempt to Share Flag</span>";
+                }
+                str+="</td>";
 
                   $("#board").append(str);
               };
