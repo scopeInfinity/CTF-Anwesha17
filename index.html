@@ -25,7 +25,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
             url: 'register.php',
             data: $('#form1').serialize(),
             success: function (response) {
-              alert('form was submitted');
+              alert(response);
               cosole.log(response);
               
             }
@@ -52,6 +52,8 @@ Capture The Flag hosted by Anwesha IITP 2017.
                 var result = $.trim(response);
                 if(result.includes("Login")) {
                      location.href="quest.php";
+                } else {
+                  alert(response);
                 }
               console.log(response);
               
