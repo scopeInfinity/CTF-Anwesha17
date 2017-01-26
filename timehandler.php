@@ -1,8 +1,8 @@
 <?php
 	date_default_timezone_set('Asia/Calcutta');
 	
-	$starttime = '01/26/2017 06:00:00 pm';
-	$endtime = '01/27/2017 06:00:00 pm';
+	$starttime = '01/26/2017 09:00:00 pm';
+	$endtime = '01/27/2017 09:00:00 pm';
 	$now  = date('m/d/Y h:i:s a', time());
 	
 	if(isset($_GET['status'])) {
