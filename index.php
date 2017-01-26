@@ -123,7 +123,53 @@ Capture The Flag hosted by Anwesha IITP 2017.
         </div>
         
         <div class='body-area'>
-        <div class='container'></div></div>
+        <div class='container'>
+          <br><br><br>
+          <center style='font-size:2em;background:rgba(180,180,180,0.9);padding: 20px;color:blue;' id='timer'>---</center>
+          <script type="text/javascript">
+          function sectostring(sec_num) {
+              var hours   = Math.floor(sec_num / 3600);
+              var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+              var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+              if (hours   < 10) {hours   = "0"+hours;}
+              if (minutes < 10) {minutes = "0"+minutes;}
+              if (seconds < 10) {seconds = "0"+seconds;}
+              return hours+':'+minutes+':'+seconds;
+          }
+        var stimeleft = <?php 
+        require('timehandler.php');
+        echo getStartTimeLeft();
+        ?>;
+        var etimeleft = <?php 
+        echo getEndTimeLeft();
+        ?>;
+        function updateMsg() {
+          if(etimeleft<=0) {
+             $('#timer').html("CTF Ended! <br><br><br> You can check the leaderboard!");
+          }
+          else if(stimeleft<=0) {
+            msg = sectostring(etimeleft);
+            $('#timer').html("Started!!! <br><br><br><br> Login to Continue.<br><br><br><br>CTF Ends in "+msg);
+            setTimeout(function() {
+              updateMsg();
+            },1000);
+        } else {
+            msg = sectostring(stimeleft);
+            $('#timer').html("Register and Relax<br><br><br><br>CTF Starts in "+msg);
+            setTimeout(function() {
+              updateMsg();
+            },1000);
+          }
+          stimeleft--;
+          etimeleft--;
+            
+
+        } 
+        updateMsg();
+        
+        </script>
+        </div></div>
         <div class="footer">
         <div class="container"></div></div>
     </body>
