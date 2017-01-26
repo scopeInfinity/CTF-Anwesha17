@@ -9,6 +9,7 @@ mustLogin();
 </head>
 <body>
 <div class="cont">
+	<h1>Destroy John</h1><br>
 You have managed to secretly capture code of a local Shopping Complex<br>
 
 Can you delete all the items from their menu.<br>
