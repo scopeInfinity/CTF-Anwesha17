@@ -69,6 +69,7 @@ function register($username, $id, $pass)
 }
 
 function attemptQuestion($flag) {
+	$flag=trim($flag);
 	if(!preg_match('/^[A-Za-z0-9]{30,50}$/',$flag)) {
 		echo "Invalid Flag'";
 		return;
@@ -79,7 +80,6 @@ function attemptQuestion($flag) {
 	$solvedQid = null;
 	foreach ($flags as $qid => $value) {
 		// echo $qid."\n";
-		// echo getFlag($qid)."\n";
 		if(getFlag($qid)==$flag) {
 			$isSolved = true;
 			$solvedQid = $qid;
@@ -103,7 +103,7 @@ function attemptQuestion($flag) {
 		}
 	}
 
-	$sql="SELECT flag,anwid FROM score where flag='$flag'";
+	$sql="SELECT flag,anwid FROM score where flag='$flag' and anwid<>'$anwid'";
 	$result=mysqli_query($con,$sql);
 	if($result && mysqli_num_rows($result)>=1) {
 		$row=mysqli_fetch_array($result);

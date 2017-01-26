@@ -17,6 +17,55 @@ function getFlags() {
 	return $flags;	
 }
 
+function getPoints($qid) {
+	switch ($qid) {
+		case 0:
+			return 20;
+			break;
+		
+		case 1:
+			return 40;
+			break;
+		
+		case 2:
+			return 50;
+			break;
+		
+		case 3:
+			return 30;
+			break;
+		
+		case 4:
+			return 100;
+			break;
+		
+		case 5:
+			return 30;
+			break;
+		
+		case 6:
+			return 10;
+			break;
+		
+		case 7:
+			return 25;
+			break;
+		
+		case 8:
+			return 25;
+			break;
+		
+		case '5596alpha':
+			return 80;
+			break;
+
+		
+		default:
+			return 0;
+			break;
+	}
+}
+
 function getBaseFlag($qid) {
 	return getFlags()[$qid];
 }
@@ -41,7 +90,7 @@ function getFlag($qid) {
 
 function isLogin() {
 
-	if(isset($_SESSION['id']) && preg_match('/[0-9]{4}/',$_SESSION['id'])) {
+	if(isset($_SESSION['id']) && preg_match('/^[Aa][Nn][Ww][0-9]{4}$/',$_SESSION['id'])) {
 		return true;
 	}
 	return false;

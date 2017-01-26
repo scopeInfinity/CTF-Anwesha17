@@ -22,7 +22,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
 
           $.ajax({
             type: 'post',
-            url: '../../register.php',
+            url: 'register.php',
             data: $('#form1').serialize(),
             success: function (response) {
               alert('form was submitted');
@@ -42,16 +42,16 @@ Capture The Flag hosted by Anwesha IITP 2017.
         $('#form2').on('submit', function (e) {
 
           e.preventDefault();
-          console.log($('#form1').serialize());
+          console.log($('#form2').serialize());
 
           $.ajax({
             type: 'post',
-            url: '../../login.php',
-            data: $('#form1').serialize(),
+            url: 'login.php',
+            data: $('#form2').serialize(),
             success: function (response) {
                 var result = $.trim(response);
-                if(result==="login"){
-                     location.href="quest.html";
+                if(result.includes("Login")) {
+                     location.href="quest.php";
                 }
               console.log(response);
               
@@ -89,8 +89,8 @@ Capture The Flag hosted by Anwesha IITP 2017.
       <div id="login" class="modal">
      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
      <form class="modal-content animate" id="form2">      <!-- Modal Content -->
-         <label><b>Username</b></label>
-         <input type="text" placeholder="Enter Username"  maxlength="15" style="height: 30px" name="anwid" required>
+         <label><b>ANWID</b></label>
+         <input type="text" placeholder="ANWxxxx"  maxlength="15" style="height: 30px" name="anwid" required>
          <label><b>Password</b></label>
          <input type="password" placeholder="Enter Password"  style="height: 30px" name="pass" required>
          <button type="submit">Login</button>
@@ -119,3 +119,4 @@ Capture The Flag hosted by Anwesha IITP 2017.
         <div class="container"></div></div>
     </body>
 </html>
+ 

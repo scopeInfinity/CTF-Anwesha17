@@ -7,9 +7,10 @@ Capture The Flag hosted by Anwesha IITP 2017.
         <title>CAPTURE THE FLAG</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/rules.css">
+        <link rel="stylesheet" href="css/leaderboard.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     </head>
     <body>
         <div class="Site-top">
@@ -17,7 +18,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
                 <h2>Capture the Flag</h2>
             </div>
             <div class="logout">
-                <button type="button">Logout</button>
+                <button type="button" onclick="location.href='logout.php'">Logout</button>
             </div>
             <!-- adding welcome for person -->
             </div> 
@@ -33,20 +34,42 @@ Capture The Flag hosted by Anwesha IITP 2017.
                   </div>
                 </nav>
         </div>
-        
-        <div class='body-area'>
-            <div class="container">
-            <h2><b>RULES</b></h2>
-            <p> <h3>Capture The Flag is a hacking challenge where you can prove your hacking skills. This challenge will test your basic understanding of various fields of Computer Science. </h3></p>
-            <ul id="dif">
-                <li><h3>Team can have maximum 3 members.</h3></li>
-                <li><h3>Participants must bring their own laptops.</h3> </li>
-                <li><h3>Use of Internet is allowed.</h3> </li>
-                <li><h3>Each problem will have different points according to its difficulty level.</h3></li>
-                <li hidden="true"><h3>There are hidden bonus questions. You might get an idea about it if you solve q3</h3></li>                
-            </ul>
+        <div class="body-area" id="table">
+            <table class="data-table">
+                <thead id='board'>
+                    <th>Sl. No.</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                </thead>
+               
+                <script language="javascript" type="text/javascript">
+
+  console.log("Attempt");
+             
+        $.ajax({
+            type: 'get',
+            url: 'leaderboard.php',
+            success: function (data) {
+              data=jQuery.parseJSON(data);
+              console.log(data);
+              for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                var str="<tr><td>" + (i+1) + "</td>";
+                str+="<td>" + data[i][1] + "</td>";
+                str+="<td>" + data[i][0] + "</td>";
+
+                  $("#board").append(str);
+              };
+              if(data.length==0) {
+                $("#board").append("<tr><td>-</td><td>-</td><td>-</td></tr>");
+              }
+            }
+          });
+
+            </script>
+            </table>
         </div>
-        </div>
+    
         <div class='footer'>
             <p>@Anwesha 2017</p>
         </div>

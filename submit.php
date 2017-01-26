@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET['flag'])) {
+if(isset($_POST['flag'])) {
 	require("controller.php");
 	mustLogin();
 	attemptQuestion($_REQUEST['flag']);
