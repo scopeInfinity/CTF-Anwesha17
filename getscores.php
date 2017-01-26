@@ -13,11 +13,13 @@ while($row = $result->fetch_assoc())
 
 $flags = getFlags();
 $returndata = array();
-foreach ($flags as $qid => $value) {
-	$returndata[$qid][0]=getPoints($qid);
-	$returndata[$qid][1]=false;
+foreach ($flags as $qid => $value) 
+if($qid>0 && $qid<=8) 
+{
+	$returndata[$qid-1][0]=getPoints($qid);
+	$returndata[$qid-1][1]=false;
 	if(isset($data[$qid]))
-		$returndata[$qid][1]=true;
+		$returndata[$qid-1][1]=true;
 }
 echo json_encode($returndata);
 

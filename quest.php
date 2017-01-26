@@ -48,26 +48,28 @@ Capture The Flag hosted by Anwesha IITP 2017.
 
         });
 
-         // $.ajax({
-         //    type: 'get',
-         //    url: 'getscores.php',
-         //    success: function (data) {
-         //      data=jQuery.parseJSON(data);
-         //      console.log(data);
+         $.ajax({
+            type: 'get',
+            url: 'getscores.php',
+            success: function (data) {
+              data=jQuery.parseJSON(data);
+              console.log(data);
 
-         //      for (var i = 0; i < data.length; i++) {
-         //        console.log(data[i]);
-         //        var str="<tr><td>" + (i+1) + "</td>";
-         //        str+="<td>" + data[i][1] + "</td>";
-         //        str+="<td>" + data[i][0] + "</td>";
-
-         //          $("#but_").append(str);
-         //      };
-         //      if(data.length==0) {
-         //        $("#board").append("<tr><td>-</td><td>-</td><td>-</td></tr>");
-         //      }
-         //    }
-         //  });
+              for (var i = 0; i < data.length; i++) {
+                if(data[i][1]){
+                  $("#but_"+(i+1)).css("background-color","green");
+                  $("#but_"+(i+1)).css("background-blend-mode","multiply");
+                  console.log("> "+(i+1));
+                }
+                var str = "Mission "+(1+i)+" ("+data[i][0]+")";
+                $("#but_"+(i+1)).text(str);
+                $("#but_"+(i+1)).attr("onmouseout",'this.innerHTML=\''+str+'\'');
+                  
+              
+              };
+              
+            }
+          });
 
       });
 
@@ -97,6 +99,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
         </div>
         
         <div class="body-area">
+            <center>Programmers love Whole Number</center><br>
                     <div class="col-sm-6" >
                       <?php
                       for ($i=1; $i <= 8 ; $i+=2) { 
