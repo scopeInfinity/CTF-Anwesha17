@@ -9,6 +9,7 @@ mustLogin();
         <link rel="stylesheet" type="text/css" href="miss3.css">
 </head>
 <body>
+	<center><h1>Login</h1>
 	<?php
 	$success =false;
 		if(isset($_POST['uname']) && isset($_POST['pwd'])) {
@@ -41,12 +42,14 @@ mustLogin();
 	?>
 
 	<form id='#' method='post'>
-		<input type='text' name='uname' value='admin'>
-		<input type='password' name='pwd' value=''>
-		<input type='submit' value='Login'>
+		<br>
+		<input type='text' name='uname' value='admin' placeholder='Username'><br><br>
+		<input type='password' name='pwd' value='' placeholder='Password'><br><br>
+		<input type='submit' value='Login'><br>
 	</form>	
 	<?php
 	}
 	?>
+	</center>
 </body>
 </html>

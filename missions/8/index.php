@@ -7,6 +7,8 @@ mustLogin();
 <link rel="stylesheet" type="text/css" href="miss8.css">
 </head>
 <body>
+	<center><h1><br>iPhone 10</h1><br>
+		<img src="https://i.ytimg.com/vi/p8IgNzeQ7VQ/hqdefault.jpg"><br><br>
 	<?php
 	$ua = $_SERVER['HTTP_USER_AGENT'];
 	if(!(preg_match('/Version\/10/i',$ua) && preg_match('/iPhone/i',$ua) ))
@@ -14,6 +16,7 @@ mustLogin();
 	else
 	echo "Flag is ". getFlag(8). " <br>";
 	?>
+	</center>
 
 </body>
 </html>

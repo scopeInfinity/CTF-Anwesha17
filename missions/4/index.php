@@ -9,6 +9,7 @@ mustLogin();
         <link rel="stylesheet" type="text/css" href="miss4.css">
 </head>
 <body>
+	<center><h1>Secure Login</h1>
 	Mission 3 is Secure, can u still get in<br>
 	<?php
 	$success =false;
@@ -42,14 +43,15 @@ mustLogin();
 		}
 	if(!$success){
 	?>
-
+	<br>
 	<form id='#' method='post'>
-		<input type='text' name='uname' value='admin'>
-		<input type='password' name='pwd' value=''>
-		<input type='submit' value='Login'>
+		<input type='text' name='uname' value='admin' placeholder='Username'><br><br>
+		<input type='password' name='pwd' value=''  placeholder='Password'><br><br>
+		<input type='submit' value='Login'><br>
 	</form>	
 	<?php
 	}
 	?>
+</center>
 </body>
 </html>

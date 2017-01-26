@@ -7,8 +7,9 @@ mustLogin();
 	<title>Key Smuggle</title>
         <link rel="stylesheet" type="text/css" href="miss2.css">
 </head>
-<body>
-John have found a bag, having mysterious numbers along with a Photo<br>
+<body style="padding:1em;">
+	<center><h1>Key Smuggle</h1></center><br>
+Customs officer have found a bag, having mysterious numbers along with a Photo<br>
 <center><img src='key.jpg'></center>
 Can you figure out, what's actually going on...<br><br>
 

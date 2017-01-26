@@ -8,6 +8,12 @@ mustLogin();
         <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
+
+<center>
+	<br>
+<h2>John Shop</h2>
+<br>
+
 <?php
 $isLoggedInShopping = false;
 $isAdminShopping = false;
@@ -74,11 +80,14 @@ if($isLoggedInShopping){
 else
 {
 ?>
+<br>
+<br>
 <form action='#' method='POST'>
-<input type='text' name='username' value=''>
-<input type='password' name='passwd' value=''>
-<input type='submit'  value='Login'>
+<input type='text' name='username' value='' placeholder="Username"><br><br>
+<input type='password' name='passwd' value='' placeholder="Password"><br><br>
+<input type='submit'  value='Login'><br>
 </form>
+</center>
 <?php
 }
 ?>
