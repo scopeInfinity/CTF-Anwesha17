@@ -46,14 +46,14 @@ Capture The Flag hosted by Anwesha IITP 2017.
 
           $.ajax({
             type: 'post',
-            url: '../../register.php',
+            url: '../../login.php',
             data: $('#form1').serialize(),
             success: function (response) {
                 var result = $.trim(data);
                 if(result==="login"){
-                     location.href="/quest.html"
+                 //    location.href="/quest.html"
                 }
-              cosole.log(response);
+              console.log(response);
               
             }
           });
