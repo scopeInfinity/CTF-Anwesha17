@@ -99,7 +99,8 @@ Capture The Flag hosted by Anwesha IITP 2017.
         </div>
         
         <div class="body-area">
-            <center>Programmers love Whole Number</center><br>
+            <center>Programmers love Whole Number</center><br><br>
+            <center style='color:black;background-color:white'>Note : Score of Mission 7 is cleared (0000 hrs 27th Jan), Please try it again </center><br>
                     <div class="col-sm-6" >
                       <?php
                       for ($i=1; $i <= 8 ; $i+=2) { 
