@@ -49,9 +49,9 @@ Capture The Flag hosted by Anwesha IITP 2017.
             url: '../../login.php',
             data: $('#form1').serialize(),
             success: function (response) {
-                var result = $.trim(data);
+                var result = $.trim(response);
                 if(result==="login"){
-                 //    location.href="/quest.html"
+                     location.href="quest.html";
                 }
               console.log(response);
               
@@ -62,14 +62,11 @@ Capture The Flag hosted by Anwesha IITP 2017.
 
       });
     </script>
-        
-
-    
     </head>
     <body>
         <div class="Site-top">
             <div class="container">
-            <a href="index.html" style="text-decoration: none"><h2>Capture the Flag</h2></a>
+            <h2>Capture the Flag</h2>
                 <div class='register'>
                       <button onclick="document.getElementById('register').style.display='block'"  id="reg_bttn">Register</button>
                   </div>
@@ -107,9 +104,9 @@ Capture The Flag hosted by Anwesha IITP 2017.
                 <nav class="navbar navbar-inverse">
                   <div class="container-fluid">
                     <ul class="nav navbar-nav">
-                        <a href="#" style="text-decoration: none;margin-left:0"><li ><b>Home </b></li></a>
-                      <a href="#" style="text-decoration: none"><li><b>Rules</b></li></a>
-                      <a href="#" style="text-decoration: none"><li><b>Leaderboard</b></li></a>
+                        <a href="index.html" style="text-decoration: none;margin-left:0"><li ><b>Home </b></li></a>
+                      <a href="rules.html" style="text-decoration: none"><li><b>Rules</b></li></a>
+                      <a href="leaderboard.html" style="text-decoration: none"><li><b>Leaderboard</b></li></a>
                       <a href="https://www.facebook.com/ctfiitp/" style="text-decoration: none"><li><b>DiscussionForum</b></li></a>
                     </ul>
                   </div>
