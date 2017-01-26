@@ -1,9 +1,10 @@
 <?php
 require('flagcontroller.php');
+require('timehandler.php');
 
 function canLogin($id, $pass)
 {
-	$loginAllowed = false;
+	$loginAllowed = isContestTime();
 
 	if(!preg_match('/^[Aa][Nn][Ww][0-9]{4}$/',$id)) {
 		echo "Invalid Anwesha ID";
@@ -11,15 +12,16 @@ function canLogin($id, $pass)
 	}
 	$con = dbConnect();
 	
-	$sql="SELECT username,name,anwid FROM login where anwid='$id' and password='".sha1($pass)."' ";
+	$sql="SELECT username,name,anwid,isadmin FROM login where anwid='$id' and password='".sha1($pass)."' ";
 	
-	//Admin Can login anytime
-	if(!$loginAllowed)
-		$sql=$sql." and isadmin=1;";
-
 	$result=mysqli_query($con,$sql);
 	if($result && mysqli_num_rows($result)==1) {
 		$row=mysqli_fetch_array($result);
+		if($row['isadmin']!=1 && !$loginAllowed) {
+			echo "Contest is Not Running!";
+			return false;
+		}
+		$_SESSION['isadmin'] = $row['isadmin'];
 		$_SESSION['name']=$row['name'];
 		$_SESSION['id']=$row['anwid'];
 		$_SESSION['username']=$row['username'];
@@ -72,6 +74,10 @@ function attemptQuestion($flag) {
 	$flag=trim($flag);
 	if(!preg_match('/^[A-Za-z0-9]{30,50}$/',$flag)) {
 		echo "Invalid Flag'";
+		return;
+	}
+	if(!isContestTime() && !(isset($_SESSION['isadmin']) && $_SESSION['isadmin']==1)) {
+		echo "Contest is Over!";
 		return;
 	}
 

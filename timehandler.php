@@ -21,6 +21,11 @@
 	function getEndTimeLeft() {
 		return $GLOBALS['endtime']-$GLOBALS['now'];
 	}
+	function isContestTime() {
+		if(getStartTimeLeft()<=0 && getEndTimeLeft()>0)
+			return true;
+		return false;
+	}
 
 	
 
