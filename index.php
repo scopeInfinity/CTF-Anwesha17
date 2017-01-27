@@ -116,7 +116,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
                         <a href="index.php" style="text-decoration: none;margin-left:0"><li ><b>Home </b></li></a>
                       <a href="rules.html" style="text-decoration: none"><li><b>Rules</b></li></a>
                       <a href="leaderboard.html" style="text-decoration: none"><li><b>Leaderboard</b></li></a>
-                      <a href="https://www.facebook.com/ctfiitp/" style="text-decoration: none"><li><b>DiscussionForum</b></li></a>
+                      <a href="https://www.facebook.com/events/343174736081160/" style="text-decoration: none"><li><b>DiscussionForum</b></li></a>
                     </ul>
                   </div>
                 </nav>
