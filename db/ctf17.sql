@@ -79,7 +79,7 @@ INSERT INTO `m4_login` (`uname`, `passwd`) VALUES
 
 CREATE TABLE `score` (
   `anwid` varchar(50) NOT NULL,
-  `qid` int(11) NOT NULL,
+  `qid` varchar(11) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `flag` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
