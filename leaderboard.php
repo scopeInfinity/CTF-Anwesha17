@@ -2,7 +2,7 @@
 require("flagcontroller.php");
 $con = dbConnect();
 	
-$sql="SELECT S.anwid as id,username,qid,time,now()-lastcheattime as t FROM `score` S JOIN login L on L.anwid=S.anwid where isadmin=0 ORDER BY time";
+$sql="SELECT S.anwid as id,username,qid,time,now()-lastcheattime as t FROM `score` S JOIN login L on L.anwid=S.anwid where isadmin=0 ORDER BY time LIMIT 15";
 $result=mysqli_query($con,$sql);
 $data = array();
 while($row = $result->fetch_assoc())
