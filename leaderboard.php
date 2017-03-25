@@ -2,7 +2,7 @@
 require("flagcontroller.php");
 $con = dbConnect();
 	
-$sql="SELECT S.anwid as id,username,qid,time,now()-lastcheattime as t FROM `score` S JOIN login L on L.anwid=S.anwid where isadmin=0 ORDER BY time LIMIT 15";
+$sql="SELECT S.anwid as id,username,qid,time,now()-lastcheattime as t FROM `score` S JOIN login L on L.anwid=S.anwid where isadmin=0 ORDER BY time";
 $result=mysqli_query($con,$sql);
 $data = array();
 while($row = $result->fetch_assoc())
@@ -29,5 +29,10 @@ function sortByOrder($a, $b) {
 	return +1;
 }
 usort($data,'sortByOrder');
-echo json_encode($data);
+$size = min(15,sizeof($data));
+$ndata = array();
+for ($i=0; $i < $size; $i++) { 
+	$ndata[$i] = $data[$i];
+}
+echo json_encode($ndata);
 ?>
