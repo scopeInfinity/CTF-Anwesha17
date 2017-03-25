@@ -150,7 +150,7 @@ Capture The Flag hosted by Anwesha IITP 2017.
           }
           else if(stimeleft<=0) {
             msg = sectostring(etimeleft);
-            $('#timer').html("Started!!! <br><br><br><br> Login to Continue.<br><br><br><br>CTF Ends in "+msg);
+            $('#timer').html("Running (Practice Mode) <br><br><br><br> Login to Continue.<br><br><br><br>CTF Ends in "+msg);
             setTimeout(function() {
               updateMsg();
             },1000);
